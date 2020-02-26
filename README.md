@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/agapov97_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/agapov97_infra)
+
 # agapov97_infra
 agapov97 Infra repository
 
