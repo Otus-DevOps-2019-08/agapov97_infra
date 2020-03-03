@@ -23,17 +23,17 @@ resource "google_compute_instance" "app" {
     # путь до приватного ключа
     private_key = file(var.private_key_path)
   }
-  provisioner "file" {
-    content     = "DATABASE_URL=${var.db_internal_ip}"
-    destination = "/tmp/reddit.env"
-  }
-  provisioner "file" {
-    source      = "${path.module}/files/puma.service"
-    destination = "/tmp/puma.service"
-  }
-  provisioner "remote-exec" {
-    script = "${path.module}/files/deploy.sh"
-  }
+  #provisioner "file" {
+  #  content     = "DATABASE_URL=${var.db_internal_ip}"
+  #  destination = "/tmp/reddit.env"
+  #}
+  #provisioner "file" {
+  #  source      = "${path.module}/files/puma.service"
+  #  destination = "/tmp/puma.service"
+  #}
+  #provisioner "remote-exec" {
+  #  script = "${path.module}/files/deploy.sh"
+  #}
 }
 resource "google_compute_address" "app_ip" {
   name = "reddit-app-ip"
